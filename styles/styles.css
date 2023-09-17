@@ -155,11 +155,10 @@ nav a i:hover {
 }
 
 .popular-companies-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
     padding: 40px 0px;
-    gap: 50px;
+    gap: 40px;
 }
 
 /* ---------------------------
@@ -349,12 +348,46 @@ nav a i:hover {
     color: red;
 }
 
-
 /* ---------------------------
-        main section
-     Popular companies Styles 
+     media query Styles 
 ----------------------------- */
 
+/* -----------------mobile devices----------------------- */
+
+@media only screen and (max-width: 576px){
+    .container, .popular-companies, 
+    .popular-collection, .featured-details{
+        width: 90%;
+        padding: 15px;
+        margin: 0 auto;
+    }
+    .popular-companies-container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .collection-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .featured-container{
+        flex-direction: column-reverse;
+        gap: 25px;
+    }
+    .featured-container{
+        margin-bottom: 20px;
+    }
+    .feature-title{
+        font-size: 22px;
+        text-align: center;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+   .feature-description{
+        font-size: 14px;
+        line-height: normal;
+    }
+    .footer-section{
+        padding: 20px;
+    }
+}
 /* ----------------
-     Common Styles 
+     End Styles 
 ------------------ */
